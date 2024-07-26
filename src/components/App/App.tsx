@@ -13,7 +13,6 @@ function App() {
   const [displayCurrencies, setDisplayCurrencies] = useState(true);
   const [amount, setAmount] = useState<number>(1); // Default to 1 for "1 euro"
   const [toCurrency, setToCurrency] = useState<string | null>(null);
-  const [selectedCurrency, setSelectedCurrency] = useState<string | null>(null); // Devise sélectionnée
   const [result, setResult] = useState<number | null>(null);
   const [searchText, setSearchText] = useState<string>(''); // État pour le texte de recherche
 
@@ -31,7 +30,7 @@ function App() {
 
   const handleCurrencyClick = (currencyName: string) => {
     setToCurrency(currencyName);
-    setSelectedCurrency(currencyName); // Met à jour la devise sélectionnée
+    
     convertCurrency(currencyName);
   };
 
@@ -76,7 +75,7 @@ function App() {
 
         <div className="result">
           <p>{result !== null ? result.toFixed(2).toLocaleString() : '---'} </p>
-          <span>{selectedCurrency ? `${selectedCurrency}` : ''}</span>
+          <span>{toCurrency ? `${toCurrency}` : ''}</span>
         </div>
       </div>
     </div>
