@@ -9,3 +9,153 @@
 body {
   /* background-color: #eee; */
 }
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f8f9fa;
+}
+
+.card {
+  background-color: #f1c5b6;
+  color: #fff;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 300px;
+
+  header {
+    background-color: #bb5432;
+    position: relative;
+    h1 {
+      margin-bottom: 10px;
+      font-weight: bold;
+      padding-top: 10px;
+    }
+
+    p {
+      margin: 0;
+      font-size: 1.2em;
+    }
+
+    input {
+      margin-top: 10px;
+      padding: 5px;
+      border: none;
+      background-color: #bb5432;
+      text-decoration: none;
+      width: 95%;
+      text-align: center;
+      margin-bottom: 20px;
+      color: #fff;
+    }
+
+
+    @keyframes rotate90 {
+      0% {
+        transform: rotate(0deg);
+      }
+      100% {
+        transform: rotate(90deg);
+      }
+    }
+    
+    @keyframes rotate0 {
+      0% {
+        transform: rotate(90deg);
+      }
+      100% {
+        transform: rotate(0deg);
+      }
+    }
+    
+    .rotate-button {
+      animation: rotate90 0.5s forwards;
+    }
+    
+    .rotate-button-reset {
+      animation: rotate0 0.5s forwards;
+    }
+
+    button {
+      margin-top: 10px;
+      padding: 5px 10px;
+      border-radius: 50%;
+      background-color: #fff;
+      border-style: solid;
+      border-width: 2px;
+      border-color: #f1c5b6;
+      color: #d9534f;
+      cursor: pointer;
+      font-weight: bold;
+      font-size: 1rem;
+      position: absolute;
+      left: 45%;
+      top: 65%;
+      
+      font-size: 20px;
+      text-align: center;
+    }
+  }
+
+  .mainCard {
+    background-color: #fff;
+    color: #bb5432;
+    padding: 10px;
+   
+    text-align: left;
+    height: 300px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    
+
+    input {
+      width: 100%;
+      padding: 5px;
+      margin-bottom: 10px;
+      border: none;
+      color: #bb5432;
+
+    }
+    input:focus{
+       border: none;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+
+      li {
+        padding: 5px 0;
+        border-bottom: 1px solid #f1c5b6;
+        cursor: pointer;
+
+        &:last-child {
+          border-bottom: none;
+        }
+
+        p {
+          margin: 0;
+        }
+
+        &:hover {
+          background-color: #f8f9fa;
+        }
+      }
+    }
+  }
+
+  .result {
+    background-color: #fff;
+    color: #bb5432;
+    padding: 25px;
+    p {
+      margin: 0;
+      font-size: 1.2em;
+      font-weight: bold;
+    }
+  }
+}
+
