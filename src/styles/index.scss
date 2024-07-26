@@ -1,0 +1,11 @@
+/* styles globaux de l'application 
+=> body, balises, etc */
+
+// on veut utiliser le fichier _reset.scss
+// on peut omettre le _ et l'extension
+@use 'reset';
+
+// ensuite les styles globaux
+body {
+  /* background-color: #eee; */
+}
